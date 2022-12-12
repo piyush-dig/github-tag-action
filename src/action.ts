@@ -44,6 +44,11 @@ export default async function main() {
   }
 
   const commitRef = commitSha || GITHUB_SHA;
+
+  core.info(
+    `sha supplied is ${commitRef}`
+  );
+
   if (!commitRef) {
     core.setFailed('Missing commit_sha or GITHUB_SHA.');
     return;
