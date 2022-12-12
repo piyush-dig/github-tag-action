@@ -16,6 +16,8 @@ import { createTag } from './github';
 import { Await } from './ts';
 
 export default async function main() {
+
+  console.log("Hello world 1")
   const defaultBump = core.getInput('default_bump') as ReleaseType | 'false';
   const defaultPreReleaseBump = core.getInput('default_prerelease_bump') as
     | ReleaseType
@@ -36,7 +38,7 @@ export default async function main() {
     mappedReleaseRules = mapCustomReleaseRules(customReleaseRules);
   }
 
-  const { GITHUB_REF, GITHUB_SHA } = process.env1;
+  const { GITHUB_REF, GITHUB_SHA } = process.env;
 
   if (!GITHUB_REF) {
     core.setFailed('Missing GITHUB_REF.');
