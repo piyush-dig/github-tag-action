@@ -49,6 +49,8 @@ export default async function main() {
 
   core.debug("Hello World Debug!!")
 
+  core.warning("Hello World Warning!!")
+
   core.info(
     `sha supplied is ${commitRef}`
   );
