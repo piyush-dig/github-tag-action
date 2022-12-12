@@ -36,7 +36,7 @@ export default async function main() {
     mappedReleaseRules = mapCustomReleaseRules(customReleaseRules);
   }
 
-  const { GITHUB_REF, GITHUB_SHA } = process.env;
+  const { GITHUB_REF, GITHUB_SHA } = process.env1;
 
   if (!GITHUB_REF) {
     core.setFailed('Missing GITHUB_REF.');
