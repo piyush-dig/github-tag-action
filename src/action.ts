@@ -45,6 +45,10 @@ export default async function main() {
 
   const commitRef = commitSha || GITHUB_SHA;
 
+  core.info("Hello world !!")
+
+  core.debug("Hello World Debug!!")
+
   core.info(
     `sha supplied is ${commitRef}`
   );
